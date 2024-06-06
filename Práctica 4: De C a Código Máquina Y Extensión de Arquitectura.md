@@ -340,7 +340,7 @@ Una vez se tiene el código, simplemente se añade a la ROM de salidas de la Uni
  </p>
 <p>Primero, se ejecutarán las primeras 4 instrucciones de la ROM, necesarias únicamente para realizar la instrucción en C:</p>
 <p align="middle">
-  <b> tEXTO 
+  <b> a = b + c
 </b></p>
 <p><em>Código después de ejecución:</em><br>
 <em>a = b + c;</em></p>
@@ -356,7 +356,46 @@ Una vez se tiene el código, simplemente se añade a la ROM de salidas de la Uni
  </p>
 <p>Como se puede observar, la variable a ha tomado el valor 10 como debe ser, probando así el adecuado comportamiento del código desarrollado durante la anterior sección de la memoria.</p>
 <h4 id="caso-3">Caso 3</h4>
+<p>Como en el anterior caso, se comenzará mostrando el código en C original para poder averiguar el resultado original y compararlo con el resultado que se obtendrá al ejecutar el código máquina en Logisim:</p>
+<p align="middle">
+  int a = 10; <br>
+  int b = 1; <br>
+ while ( a &lt; b) [ <br>
+  a = a - b; <br>
+  }
+</p>
+<p>Es un código muy simple que consiste de un bucle while y de una resta simple, que continuará hasta que la variable a sea menor o igual a b, es decir el bucle se repetirá nueve veces ya que a vale 10 y b 1. Para cada iteración del bucle a valdrá un valor menos.</p>
+<p><em>Código antes de ejecución:</em></p>
+<p align="middle">
+  <img align="middle" src="...">
+ </p>
+<p>Como en los otros casos las instrucciones comienzan desde la posición @0 mientras que las variables se comienzan a guardar desde la posición @32.</p>
+<p><em>Código después de ejecución:</em><br>
+<em>while (a &gt; b) {</em><br>
+<em>a = a - b;</em><br>
+<em>}</em></p>
+<p>Se probarán en tres iteraciones distintas del bucle while:</p>
+<p>TERCERA ITERACIÓN</p>
+<p align="middle">
+  <img align="middle" src="...">
+ </p>
+Como se puede observar tras dos iteraciones, es decir, que se encuentra actualmente en la tercera iteración, por tanto a la variable se le ha restado 1 dos veces. Por tanto, tiene que valer 8, como se muestra en la imagen superior.
+<p>SÉPTIMA ITERACIÓN:</p>
+<p align="middle">
+  <img align="middle" src="...">
+ </p>
+<p>En este caso, la variable a deberá de valer 4 como se puede ver en la imágen.</p>
+<p>DÉCIMA ITERACIÓN:</p>
+<p align="middle">
+  <img align="middle" src="...">
+ </p>
+<p>Finalmente, en la décima iteración, la variable a deberá de valer 1 y por tanto el bucle dejará de ejecutarse pues la condición ha dejado de ser válida.</p>
+<p>De esta manera se demuestra el correcto funcionamiento del código en lenguaje ensamblador del tercer caso.</p>
+<p align="middle">
+  <img align="middle" src="...">
+ </p>
 <h3 id="segunda-parte-extensión-de-la-isa">Segunda Parte: Extensión de la ISA</h3>
+<p>FALTA MIERDA POR PONER</p>
 <h2 id="conclusión">Conclusión</h2>
 <p>En este documento se ha podido apreciar tanto el trabajo realizado como los aprendizajes extraídos por los integrantes del grupo. En esta conclusión se resumen dichos conocimientos además de un repaso con las dificultades que se han presentado</p>
 <p>A lo largo de esta práctica nos hemos enfrentado por primera vez al reto de modificar un procesador como es debido para asignarle instrucciones que ejecuten las funciones de un código, y añadirle una nueva instrucción. Todo este proceso nos ha permitido comprender un poco mejor los computadores y sus componentes, requisito para poder realizar modificaciones, reparaciones.</p>
