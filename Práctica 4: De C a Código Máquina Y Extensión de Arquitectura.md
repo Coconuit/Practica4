@@ -253,6 +253,43 @@ Sin embargo, el FULL-SUBTRACTOR que se ha diseñado solo puede hacer frente a re
 </tbody>
 </table><p>Una vez aclarado se actualiza el Autómata de Máquina Sencilla para añadir la nueva instrucción SUB.</p>
 <p>Además hay que tener en cuenta que los estados equivalen a su número binario, es decir:</p>
+<blockquote>
+<p>S0 -&gt; 0 0 0<br>
+S3 -&gt; 0 1 1<br>
+S5 -&gt; 1 0 1<br>
+S7 -&gt; 1 1 1</p>
+</blockquote>
+<p>Y que las entradas de máquina sencilla tomarán la siguiente estructura:<br>
+<strong>COP2</strong>  | <strong>COP1</strong> | <strong>COP0</strong> | <strong>Flag Z (FZ)</strong><br>
+Tras aclarar los detalles del autómata lo dibujamos:</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcX8L0SdlJ_oSWd7bJ3lONq5sS3SDvoADoGqvLI2iConetOtFn33hrpbPyqRH7pOGGmExtpTrgps5IORg1TUUJOFZs0sYkLdAVQIHqr27xTrhql9KIVddJSN09NBfdgiGw_jxZ7QEegWj_u-0XiAbFJ_thJ?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+Una vez se tiene el autómata se puede comenzar a modificar la Unidad de Control. Primero hay que identificar las partes de la Unidad de Control:
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXe0glEtRsH3dLsoTDV0JTWO64r6jckNC8lKJ90bNa9DKhib5ZcMGJyO8Tpyocmmi9Jg-K1rsShMwn-T6T1nyRvPr0KBwZww6soQ2glFXmhI8P6uuylmmy9WC-xXybFCR63WdzT_m7PuPCsxqS6OuGfp9cDR?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+La primera ROM se encarga de decidir los siguientes estados de la máquina dependiendo de las entradas de Unidad de Control (Salidas de la Unidad de Proceso). Se trata de una ROM muy sencilla de modificar pues simplemente hay que seguir los estados del autómata. Además, como no hay más de 8 estados, realmente no habrá una diferencia entre hexadecimal y decimal.
+<p>Entonces, teniendo en cuenta que cada fila de la ROM de transiciones de estado equivale con un estado, solo hay que rellenarlo de manera que indique a qué estado transicionará dependiendo de su entrada:</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeLTmPvsfVdAayVbJX2pl0R2HkWyWUiFxVlmwEg3VnjfO7immxFUzioMYb6A4lL12lQMBt_iI4v-V8JAi3cs0W0bIrEoydBLeudT5VzFk7oaBQpOuq_At4-u4bELIRAUTVpezZWV6fiizkV6YVNN9x-eZf-?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+Mientras que la segunda ROM se encarga de mandar las señales encargadas de controlar la Unidad de Proceso. Debido a que se ha escogido añadir la instrucción de manera mixta, es decir, modificando ambas Unidades, no es necesario añadir ningún bit nuevo de estado ya que con 3 Bits de Estado se pueden representar hasta 8 Estados distintos.
+<p>Es por ello, que para modificar la segunda ROM solo hay que añadir una última instrucción en la posición 8 de manera que realice la resta.</p>
+<p>Para ello, hay que escoger qué necesita activar la Unidad de Proceso para poder realizar la instrucción SUB:</p>
+<p><strong>MUXSelect1 | MUXSelect0 | ALUSelect1 | ALUSelect0 | -L/E | <em>pc_en</em> | <em>ir_en</em> | <em>a_en</em> | <em>b_en</em> | fz_en</strong></p>
+<p>La traducción a Binario y Hexadecimal:</p>
+<p align="middle">
+  <b>Binario: 1 1 1 1 1 0 0 0 0 1
+</b></p>
+<p align="middle">
+  <b>Hexadecimal: 3 E 1
+</b></p>
+Una vez se tiene el código, simplemente se añade a la ROM de salidas de la Unidad de Control:
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdBs31oxJqRalZkxumDVW56HKfCy4rBvSgJ7ZEWTHa1V4xzjEVxdxyhGhmCCWVG2lwZriBM6EYWG2mkhXmMMaPxhN_bXpj0tK9hXks56TH0AcbGgkj_aAlqRCY-ybzc4kU71Ep3w-7DbVOVd-OtYr7YcGPa?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+De esta manera se ha finalizado de implementar la nueva instrucción.
 <h2 id="resultados">Resultados</h2>
 <h3 id="implementación-en-la-máquina-del-código">Implementación en la máquina del código</h3>
 <p>Contenido de la implementación en la máquina del código…</p>
