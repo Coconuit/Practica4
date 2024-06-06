@@ -131,18 +131,18 @@ En el tercer caso, hay que hacer frente a un bucle while y a una resta. Para ell
  </p>
 <p><em>Apartado A</em></p>
 <p align="middle">
-  <img align="midlle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfBwtjM08eLc0YsnHJN4Uel5_AZabLSTGgCvtehmzzy2VRX-lUdV3eFxKh4tEvl2Ug1MGZVRu-O7qGLEl0VeDTGMb4ynGcguCvzK8y_ppFUwF9FznQnBHb_n4aM7yzTQO7Q69qmbCY-6WTNCk__25r0QIhj?key=QZjS5k0dJUR0swluZunyVA">
-  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfBwtjM08eLc0YsnHJN4Uel5_AZabLSTGgCvtehmzzy2VRX-lUdV3eFxKh4tEvl2Ug1MGZVRu-O7qGLEl0VeDTGMb4ynGcguCvzK8y_ppFUwF9FznQnBHb_n4aM7yzTQO7Q69qmbCY-6WTNCk__25r0QIhj?key=QZjS5k0dJUR0swluZunyVA"> 
-</p>
-<p><em>Apartado B</em></p>
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcDUDIYr2HuBuEAv2AvgNqfjcAMoQ7NX3_eT550VjWRPP-dsVHOv00asHxYibSXMtCyCqhiHiwcoXTzEyxnik3vTZkYDh2kORZfRQocdlXwsjlvLq6ym2pr5yk4rffZ0sa12S9FR9NuLYSwToQbifX3PTYh?key=QZjS5k0dJUR0swluZunyVA"> 
+    <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcWiFoiTf3vJp4RsAZ4k4jt7zeS4-1qMV_7V9Sc8TaOLeTXkXC-YMcHnyvvph4d4wuGSsvi_4r3RzOkSuaLm1QLJGpe52nHvx580YMzZDOJD8-6yoc-KBr-Hqnd7BIojNE-GGkmlBLGvB61AWZGXKfgCDBc?key=QZjS5k0dJUR0swluZunyVA"> 
+
+</p><p><em>Apartado B</em></p>
 <p align="middle">
-  <img align="midlle" src="...">
-  <img align="middle" src="..."> 
+  <img align="midlle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfAgX9acWkzIg3DXP_jKtI5Gq1C7jnTjB4e9AC9z6GprPPaeEPBH4Xk0iNDsMWxMIeiThEDpbIr-KbKemilUlGTaHed7kpcy3wY4Rc8WlbcKSs9N75mp-zzbD0FbVzPCrFuilHeBrOBfS_tYY_nW2SYjaF9?key=QZjS5k0dJUR0swluZunyVA">
+  <img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcXfZ-SUtI5Cm_-C40710Cmwfr4kJ2fLdSYewjn7oJoEKlyr4kyJI1pltuOmU3ulO8WKpzplsa4N9IkKGjp6yJpxU6LTXHCtOulRXd2DlKQ4VYpMvc_Gv0s4aTY5cxqTXzCJVRDBwbQEsJOfHxBQkfhTZ8?key=QZjS5k0dJUR0swluZunyVA"> 
 </p>
 <p><em>Apartado C</em></p>
 <p align="middle">
-  <img align="midlle" src="...">
-  <img align="middle" src="..."> 
+  <img align="midlle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeuIwpU_gBLWlXKB91qrAY_qDmqi4TZgtUGc1gOkowrtA_3MHZ3ur6Qql7zao5Q6F5PSCXJxQjSmunC4EdlTPQcMgLcfyay268zBdQ09M6kpAM8AxHVrv5ykLZvTQINvi2xN90qkzBrzlpzGs8UrZjJTzD3?key=QZjS5k0dJUR0swluZunyVA">
+  <img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcsNkOQPodCEdSdMIi0dBTOmCjb24U342Em4CwnjRaETKNrNPRFm-MFlbr7aGrxyJjhHwo4ZYNbkfyvANTfMRAjqRYT044x9JJmVDiWi4TItWQfHUaXxWGDmzNRVahwtDU4L0aFwPTL8v7ntwKOIcls2VY?key=QZjS5k0dJUR0swluZunyVA"> 
 </p>
 <h3 id="segunda-parte-extensión-de-isa">Segunda Parte: Extensión de ISA</h3>
 <p>En la parte extra del trabajo se ha de añadir una nueva instrucción a la ISA. En este caso, se implementará una extensión de la ISA y organización de la arquitectura sencilla que permita la ejecución de la instrucción SUB @F, @D. Esta instrucción leerá de memoria el operando F, leerá de memoria el operando D, y restará el operando F al operando D, guardando el resultado en la dirección del operando D.</p>
@@ -151,11 +151,107 @@ En el tercer caso, hay que hacer frente a un bucle while y a una resta. Para ell
 <h4 id="diseño-de-un-restador">Diseño de un Restador</h4>
 <p>Se comienza diseñando un restador para añadirlo a la ALU, de manera que realice la instrucción adecuadamente. Para ello se decidió diseñar un FULL-SUBTRACTOR, que de la misma manera que un FULL-ADDER realiza la suma de 2 bits y guarda el carry, esta pieza realiza la resta de dos bits y guarda el carry para futuras iteraciones.</p>
 <p>Para diseñarlo primero se desarrolló una tabla de verdad:</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdWT98lQjtMNVYbCDBkyHWsIhM22o9cwUmGWNJprqqjVxOnFM0q46rxLVHa4aIoAH3zDtjsYaQrcwLVwP3JPKa9IOKCkgw6WTS4LNWjZNZsuYojDSlp23ABTOER9ePK7F44NixiRB0BLpZ7biElZ_XD4kg?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>Y averiguamos las expresiones lógicas a través de mapas de Karnaugh:</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXd2OnIbwU5eTY3FsQUXrnNhBhCqibZ_OcgRO0yuF7fZpQh-emWOURApWOCiVA3q4-xm7hQ4z3KDs6ovNp82G-BTTtPf4XiWvmb-yJrKJJ1Ck2ctOXTrAnWZSdaJ4UQZTQFiF3lXP18zRoMccEoxRGu2Ygur?key=QZjS5k0dJUR0swluZunyVA">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeqQzF5TypF2xpbnW9_gvP9ik9liQf45yjoezogUVNqo7gxxoH146FOokIX4JW4JuahHpK11p6AHsZ1Z73aMnuO4mXuMbpAtZ7LxsVJCu673xOuRyL1bfEbG9GE3-az1CIR6XicpBlA9JJZBR0yTioNCeos?key=QZjS5k0dJUR0swluZunyVA"> 
+</p>
+<p>Se simplificaron las expresiones:</p>
+<p align="middle">
+  <b>S = (a XOR b) XOR Cin 
+</b></p>
+<p align="middle">
+  <b>Cout = Cin * (a XOR b)’ + (a’ * b)
+</b></p>
+<p>Finalmente, se implementó de el circuito combinacional desarrollado en Logisim:</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdCfzE13BWoywW3AM5HxFfwaTMfwd9uyZDv6mUMIYrtPE4tPvP2zMXQ9NoMio7g-tMM5eI4RIEcbt2BvfawXC0TfYXhhQhcgSFlc5o91t4tYVWQe-2cgT5wdYusutzUyDDHbnB-O71Knqo3jVfz_QIx_JEz?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+Sin embargo, el FULL-SUBTRACTOR que se ha diseñado solo puede hacer frente a restas de dos elementos de 1 bit. Para ello se encadenaron 17 FULL-SUBTRACTOR’s para poder realizar restas de 2 elementos de 17 bits cada uno. (17 Bits debido a Codificación Extendida):
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdffybYKgXJWY3B9chBYxDYCx7aZLgpcXqpiM7qDf1ROQKwR6yRd_DQU3i57hWymILTFJsfURUMEuaKHgr8_rWnX1BeuHf2lFtTBg35Qgs_cs4C_AbQBCusbfEsS4YcAidq12pnNkQrZZ3KVbEVybwig9Gu?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>Una vez creado un restador de 17 bits se organizaron todos los elementos para poder unirlo a la ALU de manera sencilla:</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcqEJjSAaZrgEvSG4KsMetQPillgPHFK14LeS8kXJn-TfNZKLGYkLe2IvecQj24sCmQDhN2Vj4E1Gkr9Z3m2wGE4tt9qT3TUKJZP4laW6npLsmPePIBzB2KoqV5C633NbznO0dN2CVJbgy2bSa96ofHpiw?key=vcM-upaYYMEnmznRvyhKSA">
+ </p>
 <h4 id="modificaciones-a-la-unidad-de-procesos">Modificaciones a la Unidad de Procesos</h4>
-<p>Contenido de las modificaciones a la unidad de procesos…</p>
+<p>Una vez se ha organizado el nuevo restador de 17 bits, se añade a la ALU de la siguiente manera:</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXccmqFHKsmJDeZLh9SacWfbKzUpEfC_YcEMbx56xP1vuZ8Gpol-VZqGsAwPofpwsodp4C2rxiSep7T2hWUc1hJiaDdPrP-0hbyuyOyUsX_sK9RCChQA3niL53ff6qo-2B4LKEIQass9ucsrr88RreG3m-I?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>El multiplexor del ALU tiene un hueco libre, en el que se puede introducir la salida de nuestro restador de 17 bits, de tal manera que la instrucción ya estará lista para ejecutada cuando el ALU select tome los valores 11.</p>
+<p>Una vez se ha añadido el nuevo restador al ALU, lo único que queda es aplicar los cambios pertinentes a tanto la Unidad de Procesos como de la Unidad de Control. Estos cambios consisten en modificar todos los componentes del procesador para que puedan manejar palabras de 17 bits en lugar de 16, pues se ha añadido un bit para poder indicar la nueva instrucción (SUB), además de cambiar el ALU antiguo por el nuevo que contiene el restador:</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXek4kvxmbd9fClw73PWdM0w8aJjhIg2ceWtEMaJ9YhyJktzsyZcm4mxdnx7Jk4qZen_8q-bEYba7DIpyY47IUU4z9u2b-cvi_FURaXYOnrk4UECNQiHcc624iZzml9XDu27Yt0BX7mp3xdNis5ck3eL9_AG?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
 <h4 id="modificaciones-a-la-unidad-de-control">Modificaciones a la Unidad de Control</h4>
-<p>Contenido de las modificaciones a la unidad de control…</p>
-<h2 id="resultados">Resultados</h2>
+<p>Debido a todas las modificaciones realizadas a la Unidad de Proceso, es necesario actualizar la Unidad de Control para poder ejecutar las instrucciones. Para ello, primero se ha decidido modificar el autómata de la Máquina Sencilla para obtener una base sólida desde la que trabajar.</p>
+<p>Primero hay que tener en cuenta como la codificación extendida a afectado a la codificación de las instrucciones:</p>
+
+<table>
+<thead>
+<tr>
+<th>COP2</th>
+<th>COP1</th>
+<th>COP0</th>
+<th>Instruccióm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>ADD</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>ADD</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>CMP</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>CMP</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>MOV</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>MOV</td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>SUB</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>BEQ</td>
+</tr>
+</tbody>
+</table><h2 id="resultados">Resultados</h2>
 <h3 id="implementación-en-la-máquina-del-código">Implementación en la máquina del código</h3>
 <p>Contenido de la implementación en la máquina del código…</p>
 <h3 id="extra-implementación-en-la-máquina-del-restador">Extra: Implementación en la máquina del restador</h3>
