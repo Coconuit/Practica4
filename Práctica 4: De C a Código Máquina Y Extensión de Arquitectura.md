@@ -129,10 +129,25 @@ En el tercer caso, hay que hacer frente a un bucle while y a una resta. Para ell
 <p align="middle">
   <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdFzO6lall-mfCKi1LierKHOVTlhhrVL6DLS7clrcSOm7HgGXDI6BGTjSu4jpo1Yly1i2kwDVBgcKsdgdQoc9KAmyRvq9IsGrEi49fTHrbMyJRb0m0JE4EorA5ee0mrJAJhBUPrGTW6GjwKL46_rG_Fkq3B?key=QZjS5k0dJUR0swluZunyVA">
  </p>
+<p><em>Apartado A</em></p>
+<p align="middle">
+  </p><p><em>Apartado B</em></p>
+<p align="middle">
+  <img align="midlle" src="...">
+  <img align="middle" src="..."> 
+</p>
+<p><em>Apartado C</em></p>
+<p align="middle">
+  <img align="midlle" src="...">
+  <img align="middle" src="..."> 
+</p>
 <h3 id="segunda-parte-extensión-de-isa">Segunda Parte: Extensión de ISA</h3>
-<p>Contenido de la segunda parte…</p>
+<p>En la parte extra del trabajo se ha de añadir una nueva instrucción a la ISA. En este caso, se implementará una extensión de la ISA y organización de la arquitectura sencilla que permita la ejecución de la instrucción SUB @F, @D. Esta instrucción leerá de memoria el operando F, leerá de memoria el operando D, y restará el operando F al operando D, guardando el resultado en la dirección del operando D.</p>
+<p>Para ello se ha decidido optar por una estrategia Firmware, es decir, modificar tanto la Unidad de Proceso como la Unidad de Control. De esta manera, será más “sencillo” de implementar. La modificación en la UP consistirá en modificar la ruta para que sea capaz de soportar la extensión de codificación y añadir un restador a la ALU para que realice la operación.</p>
+<p>Después, se modificará la Unidad de Control para que realice los cambios necesarios de estado y de salida.</p>
 <h4 id="diseño-de-un-restador">Diseño de un Restador</h4>
-<p>Contenido del diseño de un restador…</p>
+<p>Se comienza diseñando un restador para añadirlo a la ALU, de manera que realice la instrucción adecuadamente. Para ello se decidió diseñar un FULL-SUBTRACTOR, que de la misma manera que un FULL-ADDER realiza la suma de 2 bits y guarda el carry, esta pieza realiza la resta de dos bits y guarda el carry para futuras iteraciones.</p>
+<p>Para diseñarlo primero se desarrolló una tabla de verdad:</p>
 <h4 id="modificaciones-a-la-unidad-de-procesos">Modificaciones a la Unidad de Procesos</h4>
 <p>Contenido de las modificaciones a la unidad de procesos…</p>
 <h4 id="modificaciones-a-la-unidad-de-control">Modificaciones a la Unidad de Control</h4>
