@@ -307,7 +307,54 @@ Una vez se tiene el código, simplemente se añade a la ROM de salidas de la Uni
 <h3 id="primera-parte-resultados-compilación-y-ensamblaje-de-código-en-c">Primera Parte: Resultados Compilación y Ensamblaje de Código en C</h3>
 <p>En este subapartado se verá el funcionamiento de los códigos diseñados en la sección anterior, para cada código en C. Para ello, se implementa en la RAM de la Unidad de Procesos los códigos en lenguaje Máquina traducidos a hexadecimal.</p>
 <h4 id="caso-1">Caso 1</h4>
+<p>El código en este apartado es muy sencillo, primero realiza la suma entre las variables a y b, cuyos valores son 0 y 1 respectivamente, guardando el resultado de la operación en a. Para luego igualar b a a, de manera que al final del código tanto en las variables a y b deberías haber un 1.</p>
+<p><em>Código antes de ejecución:</em></p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcgWhniXRg44nNnK3yGT3I4chQuBx1pNBntL5XGaXw8-vBi5wFxVB4Cm4bRGuLsvVuyuhFXXhzpsNwhvjyGgzRrR7gkcrEwTxUbvq_fZCo66P-egkSLnXKZo10JdXJI23eHpSllqcz06H-CofB6N9o6zKY?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>La variable a se encuentra en la posición de memoria @32 y b en la posición @33.</p>
+<p><em>Código después de ejecución:</em></p>
+<p><em>a = a + b;</em></p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcw2hTL-Ln7N_cr7If_Oe2VvQoDXNyiqSXHZ0BA7k1hwX1GCkOoWir0hclSckBnFym33CwXerwBErgoY1z-eLCu3yR-P3qDVw_lvF21YSnyT428EEthy1iMeXUO0W130uXE9_K3mS09dZ2U08SWAKpRsJ4I?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>Como se puede ver, una se han ejecutado las instrucciones de la RAM, tanto a como b tiene el valor prometido, 1.</p>
+<p>La verdad que es un código un poco extraño pues el resultado de las operaciones es difícil de probar, ya que la posición b tiene el valor 1 desde el comienzo, probando la demostración de la segunda instrucción del código un desafío.</p>
 <h4 id="caso-2">Caso 2</h4>
+<p>En este caso se comenzará mostrando el código para recordar el adecuado comportamiento que la máquina debe simular:</p>
+<p align="middle">
+  int a = 5; <br>
+  int b = 7; <br>
+  int c = 10; <br>
+  a = b+c; <br>
+  if (a == 17){<br>
+  a = c; <br>
+  } else {<br>
+  a = b; <br>
+  }
+</p>
+<p>Como se podrá apreciar los valores se encuentran en la posición @32 de memoria. Y las instrucciones se encuentran en su posición @0.</p>
+<p><em>Código antes de ejecución:</em></p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXd3QilR3HRHnu1fJPZKe7NVI8NxNvC6VTdCrSMDREfXjMsvQbugbUi0gDBjQcMdLYBnQW_l1mhx3c1TdoqE-YJ9oH0VfKN24NBbEto2fzxuOXIy423cDcss0LvcZb56FkhCmegFXCrMU0B178FMsKYdkaag?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>Primero, se ejecutarán las primeras 4 instrucciones de la ROM, necesarias únicamente para realizar la instrucción en C:</p>
+<p align="middle">
+  <b> tEXTO 
+</b></p>
+<p><em>Código después de ejecución:</em><br>
+<em>a = b + c;</em></p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeoWXs02gShqvIATfO1HMae_AWVTU8N0diqq2dNpSgh_EhEFvtgwodhmwoLEEGBOZghCI_kqzL_GeIQM8Ih-VxsW5sayoe_0D9w0xo3rzHe_MeGoMf3NUnbIxAE4OJkrlwKwvO7_ablSOTZgHgdtntQQPgJ?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>Como se puede observar las 4 instrucciones realizan adecuadamente la suma, pues tanto b y c mantienen su valores previos, mientras que la variable a adquiere el valor de la suma de b y c, es decir, 17, pues 7 + 10 = 17.</p>
+<p>Gracias a ello, se puede comprender el gran avance y las ventajas que los lenguajes de alto nivel nos proporcionan, pues se pueden ejecutar instrucciones simples de manera sencilla, en vez de necesitar 4 distintas instrucciones para poder obtener el mismo resultado.</p>
+<p>Se puede observar que la posición @36 ha adquirido un nuevo valor, pues se utilizaba como variable auxiliar donde guardar el valor de b momentáneamente</p>
+<p>Por último, se realiza una comparación, para comprobar si a es igual a 17, que lo es, y se igual a 10, es decir a en hexadecimal.</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXemUuhrDlHmlnRNgX5y-N1ZqCk3CwhUCnULKhTVtrf3K8Mp-KICuhdVYt-ikxzNy8kLmQzXoqdd803DQctR-3j_B-kyaDS6A8hvQYOTDxamEcg3GvAMsRG4s1oANHQ1VsipOIrQlFT7hrB-OF7guKvGeRg4?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>Como se puede observar, la variable a ha tomado el valor 10 como debe ser, probando así el adecuado comportamiento del código desarrollado durante la anterior sección de la memoria.</p>
 <h4 id="caso-3">Caso 3</h4>
 <h3 id="segunda-parte-extensión-de-la-isa">Segunda Parte: Extensión de la ISA</h3>
 <h2 id="conclusión">Conclusión</h2>
