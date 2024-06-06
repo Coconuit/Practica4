@@ -90,7 +90,7 @@ Para traducir un código en C a ensamblador, primero hay que declarar/escoger en
 <p><em>Apartado A:</em><br>
 <img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfvC2KOA5LKU9gLvPH9KeWR9NFjsFHgaaPn111sOIMhFMSnorkpfEdjd2cNLdm_6KwKWiBxNFzTYbUQlS9HgmGtxtDNMu4Vdad9MsEbtRUGIcV-PtXKN2NMfELZyRnD5MVXOJuBLnVfGL-kpUBuGa3G3m76?key=QZjS5k0dJUR0swluZunyVA" alt=""> <img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXc7q7cZhpkN2mipbKMmwLPm9z-drIxil894GB6dA1KgXS2A2_NOeLfjBa8JC3pHZI0P8G75US6smyG0xxrFK6IeHlNw-o0uXj61ZVqwoDoFMlnXCBYPkwGqF6ZCHlzpra-Hletb8jtBKu1xMATEHi2ecH79?key=QZjS5k0dJUR0swluZunyVA" alt=""></p>
 <p align="middle">
-  <img align="top" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfvC2KOA5LKU9gLvPH9KeWR9NFjsFHgaaPn111sOIMhFMSnorkpfEdjd2cNLdm_6KwKWiBxNFzTYbUQlS9HgmGtxtDNMu4Vdad9MsEbtRUGIcV-PtXKN2NMfELZyRnD5MVXOJuBLnVfGL-kpUBuGa3G3m76?key=QZjS5k0dJUR0swluZunyVA">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfvC2KOA5LKU9gLvPH9KeWR9NFjsFHgaaPn111sOIMhFMSnorkpfEdjd2cNLdm_6KwKWiBxNFzTYbUQlS9HgmGtxtDNMu4Vdad9MsEbtRUGIcV-PtXKN2NMfELZyRnD5MVXOJuBLnVfGL-kpUBuGa3G3m76?key=QZjS5k0dJUR0swluZunyVA">
   <img align="top" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXc7q7cZhpkN2mipbKMmwLPm9z-drIxil894GB6dA1KgXS2A2_NOeLfjBa8JC3pHZI0P8G75US6smyG0xxrFK6IeHlNw-o0uXj61ZVqwoDoFMlnXCBYPkwGqF6ZCHlzpra-Hletb8jtBKu1xMATEHi2ecH79?key=QZjS5k0dJUR0swluZunyVA"> 
 </p>
 <p>En este caso la traducción ha sido simple, únicamente se han sumado las variables y guardado el resultado en ambas variables.</p>
