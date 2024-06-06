@@ -120,6 +120,11 @@ En el tercer caso, hay que hacer frente a un bucle while y a una resta. Para ell
 <p align="middle">
   <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeCx-xfZFH8DJOhr8rj9C_0Gg0N6LRkcSPlFzAqin5cmtDWzWyrStHxvUB8tI62nzUo9qgg4gMrq073Pjm_gy6X6JtaBkC9HFudWgpN-nE4YXJ4acjuOQh1qTGd7HYohuF_yllqYCC7087xilvWM3BL2I-R?key=QZjS5k0dJUR0swluZunyVA">
  </p>
+<p>Como se puede ver, las instrucciones están divididas en tres secciones:</p>
+<p><strong>COP:</strong> Instrucciones → 2 Bits</p>
+<p><strong>@F:</strong> Dirección del Primer Elemento → 7 Bits</p>
+<p><strong>@D:</strong> Dirección del Segundo Elemento → 7 Bits<br>
+<img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXewB81lwbuqLXBz5joONQqIJs7neuNwB3j5Z9pIZBUBhuXsOMs9O4TA5iKdlE0tTgYJkSCg7wUItsbtTGHuNcTl1UYgm3kXoLKv6leuBYQo9in-UOaLE-3sCY7Y9FB4gNYZxqeV2HpkGPP_wyfkt28DX-4?key=QZjS5k0dJUR0swluZunyVA" alt=""></p>
 <h3 id="segunda-parte-extensión-de-isa">Segunda Parte: Extensión de ISA</h3>
 <p>Contenido de la segunda parte…</p>
 <h4 id="diseño-de-un-restador">Diseño de un Restador</h4>
