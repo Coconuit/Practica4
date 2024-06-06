@@ -82,9 +82,11 @@ Universidad San Jorge</p>
 <p><strong>4. Comprobar Resultados:</strong>  Como en la anterior parte, este apartado se encontrará junto a los resultados. Se desarrollará un código para probar la nueva instrucción y se podrá ver el funcionamiento de la máquina sencilla con una nueva instrucción.</p>
 <h3 id="primera-parte-compilación-y-ensamblaje-del-código-en-c">Primera Parte: Compilación y Ensamblaje del Código en C</h3>
 <h4 id="traducción-a-lenguaje-ensamblador">Traducción a lenguaje ensamblador</h4>
-<p>Para comenzar con el ejercicio, se debía traducir el código en C al lenguaje ensamblador de la máquina. El lenguaje ensamblador de máquina sencilla contiene las siguientes cuatro instrucciones:<br>
-<img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeDCsIPW6rK7y9hYUgxzisHptBRVmNYHHWSP1BppVjj5sR4SF6zlWl5YtetgKnvZ7_p61perhN_1Nyho4pJJe0exeinqqC6ESfjKPL7UEPNWWMS4KHWz6NapDvTc50_gElkCZVr0zjUzbM6rja0w8kbU54?key=QZjS5k0dJUR0swluZunyVA"><br>
-Para traducir un código en C a ensamblador, primero hay que declarar/escoger en qué posición de memoria se van a guardar las variables. Después se escribe el código en el ensamblador.</p>
+<p>Para comenzar con el ejercicio, se debía traducir el código en C al lenguaje ensamblador de la máquina. El lenguaje ensamblador de máquina sencilla contiene las siguientes cuatro instrucciones:</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeDCsIPW6rK7y9hYUgxzisHptBRVmNYHHWSP1BppVjj5sR4SF6zlWl5YtetgKnvZ7_p61perhN_1Nyho4pJJe0exeinqqC6ESfjKPL7UEPNWWMS4KHWz6NapDvTc50_gElkCZVr0zjUzbM6rja0w8kbU54?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>Para traducir un código en C a ensamblador, primero hay que declarar/escoger en qué posición de memoria se van a guardar las variables. Después se escribe el código en el ensamblador.</p>
 <p>Quizá lo más importante a destacar en este apartado son las posiciones de memoria escogidas para guardar tanto las instrucciones como las variables. En los tres casos se ha decidido comenzar a guardar los datos desde las mismas posiciones. Evidentemente, las instrucciones se guardarán en la posición @0 ya que la máquina comenzará a leer por dicha posición.</p>
 <p>Sin embargo, se ha tomado la decisión de comenzar a guardar las variables desde la posición @32 de memoria ya que se encuentra a suficiente distancia de las instrucciones como para poder añadir más de ser necesario y es potencia de 2, por lo que los datos no se encontrarán entre dos posiciones de memoria.</p>
 <p><em>Apartado A:</em></p>
