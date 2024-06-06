@@ -95,8 +95,11 @@ Universidad San Jorge</p>
   <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXc7q7cZhpkN2mipbKMmwLPm9z-drIxil894GB6dA1KgXS2A2_NOeLfjBa8JC3pHZI0P8G75US6smyG0xxrFK6IeHlNw-o0uXj61ZVqwoDoFMlnXCBYPkwGqF6ZCHlzpra-Hletb8jtBKu1xMATEHi2ecH79?key=QZjS5k0dJUR0swluZunyVA"> 
 </p>
 <p>En este caso la traducción ha sido simple, únicamente se han sumado las variables y guardado el resultado en ambas variables.</p>
-<p><em>Apartado B</em><br>
-<img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXc1JFPvg09ooN9mFIqUx2kqokI2xigj-EtKrwtzY3byltVrfLiE2E-l6gm0eErCwotPYF_yrkmWVX0YH6Op6mNfMOx4nEQIp4CIdEa1f8wvu3QLLSU2AFLK7MKdKHgFtrDZ1KSEnk9HZCCFclhVSYfdGgni?key=QZjS5k0dJUR0swluZunyVA" alt=""> <img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXerZIRDncCo_1GTgxPHgDex8kuN1vQi9Wxd6pjv6wRxtBnIPxH6JXoVT5E_tQbhOC_BPJAx8Zf6rL0V8mE-gtlHTWbDfQ4BVO2XUwDmu1EdzsVTfZQJsoedGcYSdm_Lv3o0NKtccNEsBTyNF8-NGchkRkI?key=QZjS5k0dJUR0swluZunyVA" alt=""></p>
+<p><em>Apartado B</em></p>
+<p align="middle">
+  <img align="midlle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXc1JFPvg09ooN9mFIqUx2kqokI2xigj-EtKrwtzY3byltVrfLiE2E-l6gm0eErCwotPYF_yrkmWVX0YH6Op6mNfMOx4nEQIp4CIdEa1f8wvu3QLLSU2AFLK7MKdKHgFtrDZ1KSEnk9HZCCFclhVSYfdGgni?key=QZjS5k0dJUR0swluZunyVA">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXerZIRDncCo_1GTgxPHgDex8kuN1vQi9Wxd6pjv6wRxtBnIPxH6JXoVT5E_tQbhOC_BPJAx8Zf6rL0V8mE-gtlHTWbDfQ4BVO2XUwDmu1EdzsVTfZQJsoedGcYSdm_Lv3o0NKtccNEsBTyNF8-NGchkRkI?key=QZjS5k0dJUR0swluZunyVA"> 
+</p>
 <p>El segundo caso es un poco más complicado. Primero, se han creado dos variables auxiliares para poder guardar el resultado momentáneamente y poder hacer la comparación del condicional if.</p>
 <p>Las primeras cuatro instrucciones del código en ensamblador se encargan de realizar el siguiente código en C:</p>
 <blockquote>
