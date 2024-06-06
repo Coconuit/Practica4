@@ -36,11 +36,22 @@ Universidad San Jorge</p>
 </li>
 <li><a href="#resultados">Resultados</a>
 <ul>
-<li><a href="#implementaci%C3%B3n-en-la-m%C3%A1quina-del-c%C3%B3digo">Implementación en la máquina del código</a></li>
-<li><a href="#extra-implementaci%C3%B3n-en-la-m%C3%A1quina-del-restador">Extra: Implementación en la máquina del restador</a></li>
+<li><a href="#primera-parte-resultados-compilaci%C3%B3n-y-ensamblaje-de-c%C3%B3digo-en-c">Primera Parte: Resultados Compilación y Ensamblaje de Código en C</a>
+<ul>
+<li><a href="#caso-1">Caso 1</a></li>
+<li><a href="#caso-2">Caso 2</a></li>
+<li><a href="#caso-3">Caso 3</a></li>
 </ul>
 </li>
-<li><a href="#conclusi%C3%B3n">Conclusión</a></li>
+<li><a href="#segunda-parte-extensi%C3%B3n-de-la-isa">Segunda Parte: Extensión de la ISA</a></li>
+</ul>
+</li>
+<li><a href="#conclusi%C3%B3n">Conclusión</a>
+<ul>
+<li><a href="#dificultades">Dificultades</a></li>
+<li><a href="#conclusiones-finales">Conclusiones finales</a></li>
+</ul>
+</li>
 <li><a href="#referencias">Referencias</a></li>
 </ul>
 <hr>
@@ -289,14 +300,37 @@ Una vez se tiene el código, simplemente se añade a la ROM de salidas de la Uni
 <p align="middle">
   <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdBs31oxJqRalZkxumDVW56HKfCy4rBvSgJ7ZEWTHa1V4xzjEVxdxyhGhmCCWVG2lwZriBM6EYWG2mkhXmMMaPxhN_bXpj0tK9hXks56TH0AcbGgkj_aAlqRCY-ybzc4kU71Ep3w-7DbVOVd-OtYr7YcGPa?key=QZjS5k0dJUR0swluZunyVA">
  </p>
-De esta manera se ha finalizado de implementar la nueva instrucción.
+<p>De esta manera se ha finalizado de implementar la nueva instrucción.</p>
 <h2 id="resultados">Resultados</h2>
-<h3 id="implementación-en-la-máquina-del-código">Implementación en la máquina del código</h3>
-<p>Contenido de la implementación en la máquina del código…</p>
-<h3 id="extra-implementación-en-la-máquina-del-restador">Extra: Implementación en la máquina del restador</h3>
-<p>Contenido de la implementación en la máquina del restador…</p>
+<p>En esta sección, se presentan los hallazgos obtenidos a partir del desarrollo y ejecución del proyecto. Los resultados se estructuran de manera clara y concisa, detallando las principales observaciones y análisis de los datos recopilados. Cada subapartado proporcionará una descripción de los resultados obtenidos en cada una de las dos partes.</p>
+<p>Este apartado tiene por objetivo ofrecer una visión integral del desempeño del proyecto y las conclusiones que se pueden alcanzar a partir de los datos obtenidos.</p>
+<h3 id="primera-parte-resultados-compilación-y-ensamblaje-de-código-en-c">Primera Parte: Resultados Compilación y Ensamblaje de Código en C</h3>
+<p>En este subapartado se verá el funcionamiento de los códigos diseñados en la sección anterior, para cada código en C. Para ello, se implementa en la RAM de la Unidad de Procesos los códigos en lenguaje Máquina traducidos a hexadecimal.</p>
+<h4 id="caso-1">Caso 1</h4>
+<h4 id="caso-2">Caso 2</h4>
+<h4 id="caso-3">Caso 3</h4>
+<h3 id="segunda-parte-extensión-de-la-isa">Segunda Parte: Extensión de la ISA</h3>
 <h2 id="conclusión">Conclusión</h2>
-<p>Contenido de la conclusión…</p>
+<p>En este documento se ha podido apreciar tanto el trabajo realizado como los aprendizajes extraídos por los integrantes del grupo. En esta conclusión se resumen dichos conocimientos además de un repaso con las dificultades que se han presentado</p>
+<p>A lo largo de esta práctica nos hemos enfrentado por primera vez al reto de modificar un procesador como es debido para asignarle instrucciones que ejecuten las funciones de un código, y añadirle una nueva instrucción. Todo este proceso nos ha permitido comprender un poco mejor los computadores y sus componentes, requisito para poder realizar modificaciones, reparaciones.</p>
+<p>Una gran herramienta usada durante esta práctica ha sido código en ensamblador, hasta entonces sólo visto con temor y respeto en clase, hemos tenido la oportunidad trabajar con él, aplicándolo en esta práctica.</p>
+<h3 id="dificultades">Dificultades</h3>
+<p>A lo largo de este trabajo nos hemos enfrentado a muchas dificultades que nos has puesto a prueba, frenando la correcta realización del trabajo. Sin embargo, gracias a un persistente esfuerzo, hemos podido seguir adelante con la práctica.</p>
+<p>Uno de los primeros obstáculos a los que nos enfrentamos fue sortear fue la realización del caso 3 del código propuesto en la práctica, pues la función CMP del ALU solamente hace comparaciones de igualdad, y se nos pedía hacer una comparación de tipo “mayor que”. Esto se solucionó una vez comprendimos que el Ca2 tenía que ser utilizado para hacer varias iteraciones de manera que se compruebe de manera efectiva que la comparación se realizaba correctamente.</p>
+<p>Otro problema con este mismo caso 3 fue la “compilación” en el propio procesador, pues a pesar de estar bien programado en ensamblador, y traducido a hexadecimal, Logisim no lo interpretaba como debía. Esto fue solucionado realizando una versión alternativa del código que Logisim pudiera interpretar de la manera deseada. Estos archivos están añadidos a la carpeta como “RAMCase3_Adecuada” (el correcto) y “RAMCase3_Modificada” (la que Logisim ejecuta correctamente).</p>
+<p>Pero sin duda, donde nos hemos enfrentado a las mayores dificultades, ha sido trabajando en la parte extra. Se podría describir como la parte más exigente de todo el trabajo, que nos ha obligado a no solo aplicar todos nuestros conocimientos, sino a investigar más allá, utilizando todas las fuentes posibles a nuestro alcance.</p>
+<p>El restador fue en un principio planteado para hacer directamente la resta de 17 bits, sin necesidad de pasos intermedios. Sin embargo, al proceder a su realización pudimos ver que no funcionaba de manera correcta. Tras buscar una solución, mediante todos los medios posibles, nos decantamos en dividir el problema y solucionarlo creando dos pasos previos: un restador preparado para un bit, un conjunto de 17 restadores que forman el restador de 17 bits, y para finalizar, el restador completo de 17 bits que está añadido en el ALU (Véase su implementación y preparación en la sección de “Decisiones de Diseño”).</p>
+<h3 id="conclusiones-finales">Conclusiones Finales</h3>
+<p>El objetivo de esta práctica, como estipulado en el enunciado era: “convertirnos en compiladores y ensambladores humanos”</p>
+<p>Convirtiendo código sencillo en C, primero a lenguaje ensamblador en nuestra arquitectura de procesador sencilla, y después al lenguaje máquina que entenderá nuestro microprocesador, empleando el código máquina ensamblado en la implementación del microprocesador de la arquitectura sencilla para comprobar su funcionamiento.</p>
+<p>Creemos que hemos cumplido con creces el objetivo de la práctica, y estamos muy orgullosos tanto del resultado como de todo el trabajo que hemos invertido en esta práctica, principalmente por los conocimientos que hemos adquirido gracias a la realización de esta. En general , el concepto de máquina sencilla nos parece muy interesante, y consideramos que como futuros informáticos, es un conocimiento indispensable que tenemos que saber.</p>
 <h2 id="referencias">Referencias</h2>
-<p>Listado de referencias…</p>
+<ul>
+<li>
+<p>Apuntes de alumnos de Unizar: Máquina sencilla: Introducción a estructura básica de un ordenador</p>
+</li>
+<li>
+<p>Restador: ​​<a href="https://www.geeksforgeeks.org/full-subtractor-in-digital-logic/">https://www.geeksforgeeks.org/full-subtractor-in-digital-logic/</a></p>
+</li>
+</ul>
 
