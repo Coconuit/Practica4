@@ -131,7 +131,10 @@ En el tercer caso, hay que hacer frente a un bucle while y a una resta. Para ell
  </p>
 <p><em>Apartado A</em></p>
 <p align="middle">
-  </p><p><em>Apartado B</em></p>
+  <img align="midlle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfBwtjM08eLc0YsnHJN4Uel5_AZabLSTGgCvtehmzzy2VRX-lUdV3eFxKh4tEvl2Ug1MGZVRu-O7qGLEl0VeDTGMb4ynGcguCvzK8y_ppFUwF9FznQnBHb_n4aM7yzTQO7Q69qmbCY-6WTNCk__25r0QIhj?key=QZjS5k0dJUR0swluZunyVA">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfBwtjM08eLc0YsnHJN4Uel5_AZabLSTGgCvtehmzzy2VRX-lUdV3eFxKh4tEvl2Ug1MGZVRu-O7qGLEl0VeDTGMb4ynGcguCvzK8y_ppFUwF9FznQnBHb_n4aM7yzTQO7Q69qmbCY-6WTNCk__25r0QIhj?key=QZjS5k0dJUR0swluZunyVA"> 
+</p>
+<p><em>Apartado B</em></p>
 <p align="middle">
   <img align="midlle" src="...">
   <img align="middle" src="..."> 
