@@ -392,7 +392,51 @@ Como se puede observar tras dos iteraciones, es decir, que se encuentra actualme
 <p>Finalmente, en la décima iteración, la variable a deberá de valer 1 y por tanto el bucle dejará de ejecutarse pues la condición ha dejado de ser válida.</p>
 <p>De esta manera se demuestra el correcto funcionamiento del código en lenguaje ensamblador del tercer caso.</p>
 <h3 id="segunda-parte-extensión-de-la-isa">Segunda Parte: Extensión de la ISA</h3>
-<p>FALTA MIERDA POR PONER</p>
+<p>En este apartado se demuestra la correcta implementación de una nueva instrucción a la ISA. Dicha instrucción es SUB B A, donde se resta B a A y activa el Flag Z en caso de que el resultado sea igual a 0.</p>
+<p>Para demostrarlo se han implementado dos instrucciones:</p>
+<p align="middle">
+  <b>SUB @5, @4 → 18284
+</b></p>
+<p align="middle">
+  <b>BEQ 0, @7F → 1C07f
+</b></p>
+De esta manera, dependiendo del resultado de la resta el BEQ se activará o no.
+<p><strong>Primer Experimento:</strong></p>
+<p>En el primer caso, se restan dos dieces para que el resultado sea igual a 0 y BEQ se active, demostrando así que la instrucción ha sido añadida adecuadamente</p>
+<p><strong>Código antes de ejecución:</strong></p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdY0L6UYBZgjGt84SwFErGuK1EatC9SJHCtTjzNJhbrNC6ZKp-NxZYon1P87Kr6n01p4VmA2RG_2unxidZQafNbAg0aAhC_esOWJuDV6uwAe84aTs8-RmnhKQ2cky16Qld9tk1pVDEXgTWW3Tk6co6rksU?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p><strong>Código después de ejecución:</strong></p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeDC4k-9t3Xl1LyBnBoFNo2OvVcR35VbaSL70y-tTvJjaG6WxaOcLdGiCJXy8eUMoVML5JiZTKdGJIokyBQ4G_OgVQir1sC93Xmc_VtTTLwvZSRxN9XQHyBcwLnOYG7g505qPSbeRhuIHNTXocu7fa3MHVX?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>Realiza la resta adecuadamente, ya que la posición @4 ahora se encuentra vacía pues 10 - 10 = 0.</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdT29dVR-3GQB6pB8-ttI2_LcIUBCJTWWDSQwxNAukim1zuHVojkot_mV_J3qNCCsCkTTqtn5iTxUYy6UuUBvBaRcENZRTnjwAZZdls0eNRH_lf9z1pZheLJ69LFrUujm7EbMvnLeAED6gCY_bkXy2T99XS?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>Además, la instrucción BEQ se ha activado como era de esperar, ya que FZ es 1, y como vemos en la imagen superior donde se puede observar la RAM, se ve que ahora se encuentra en la posición 7f. Demostrando así, su correcto funcionamiento.</p>
+<p><strong>Segundo Experimento</strong><br>
+En este segundo experimento, se restará 10 y 3, logrando que el resultado no de 0 logrando que el Flag Z no se active y por tanto BEQ tampoco. Se utilizaran las mismas instrucciones:</p>
+<p align="middle">
+  <b>SUB @5, @4 → 18284
+</b></p>
+<p align="middle">
+  <b>BEQ 0, @7F → 1C07f
+</b></p>
+<p><strong>Código antes de ejecución:</strong></p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXc0yA72mgvjG2cIyJyT31tRotIrkVGxafPn3q0-Q3dxiqPQi3H-Qr2uAKKe3C9MyDDnCGGeH0yTytWxQ9VG0d2Szps6TSg8sjHLGv8eHvBjzWPVQUs5cKOTiielVvKcxT6V_i8efIP8oOtbh18UCzXZF2w?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p><strong>Código después de ejecución:</strong></p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfNNrY-212XtghqBvJXepE__Ki2DeQ3FogqTCpwWuU_AZJjh2dvU_VvQmqSKmKN4qDux3VbB5n64Iph4ECwAlaTg7LGk0Fm8IluZYr_GVdRFxK0eW7rmPUyhV4zThoQMqOh9E-nTziW_IOykMrx0YYgxEpE?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>Como en el anterior experimento, se puede observar que la instrucción SUB funciona correctamente ya que la resta ha sido ejecutada y da como resultado la solución adecuada, 10 - 3 = 7. Y como se puede ver en la imagen inferior, el Flag Z no se ha activado y por tanto la instrucción BEQ tampoco ha realizado su función.</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcR6xOH_wpGcQdVcxRqvOJjGGdqssS_DipcTfJkSRzU1KE-v31_oABNGJqnmoYCs_kC5c5u0aJ3UoJEDYhEAge0vfbM4yJNVy6beaeZhy_3eWHYKxXcfcYi8JypMIkqleSqb6B5y0XsuXkQjZBSXXuuv5UX?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
+<p>A lo largo de esta sección, se ha demostrado el correcto funcionamiento de todos los diseños logrados durante la realización del proyecto. Gracias a ello, se ha aprendido el correcto procedimiento para traducir un código de un lenguaje de alto nivel como lo es C a el más bajo posible, lenguaje máquina. Comprendiendo así la importancia de la labor de un buen compilador.</p>
 <h2 id="conclusión">Conclusión</h2>
 <p>En este documento se ha podido apreciar tanto el trabajo realizado como los aprendizajes extraídos por los integrantes del grupo. En esta conclusión se resumen dichos conocimientos además de un repaso con las dificultades que se han presentado</p>
 <p>A lo largo de esta práctica nos hemos enfrentado por primera vez al reto de modificar un procesador como es debido para asignarle instrucciones que ejecuten las funciones de un código, y añadirle una nueva instrucción. Todo este proceso nos ha permitido comprender un poco mejor los computadores y sus componentes, requisito para poder realizar modificaciones, reparaciones.</p>
