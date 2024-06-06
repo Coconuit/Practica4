@@ -367,7 +367,7 @@ Una vez se tiene el código, simplemente se añade a la ROM de salidas de la Uni
 <p>Es un código muy simple que consiste de un bucle while y de una resta simple, que continuará hasta que la variable a sea menor o igual a b, es decir el bucle se repetirá nueve veces ya que a vale 10 y b 1. Para cada iteración del bucle a valdrá un valor menos.</p>
 <p><em>Código antes de ejecución:</em></p>
 <p align="middle">
-  <img align="middle" src="...">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXf9Xo5uVbp53M8mv9fhEFXqh7HFG_j30O_hg0VTn3x0OnInPQZaQ_XqH74Een2FBS4mzifaJAQuG-StJAz284NjTwShS-6A7V53LOS_xYJaCdcL-C0Yji6bErlmtdTBwXTmm-hPkU5I3M_pZPzjO6VyGm0n?key=QZjS5k0dJUR0swluZunyVA">
  </p>
 <p>Como en los otros casos las instrucciones comienzan desde la posición @0 mientras que las variables se comienzan a guardar desde la posición @32.</p>
 <p><em>Código después de ejecución:</em><br>
@@ -377,23 +377,20 @@ Una vez se tiene el código, simplemente se añade a la ROM de salidas de la Uni
 <p>Se probarán en tres iteraciones distintas del bucle while:</p>
 <p>TERCERA ITERACIÓN</p>
 <p align="middle">
-  <img align="middle" src="...">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXft4g-VcEAgJLk7kl4cgwo1T0bWccCB7lBlByQfqkdiW8CWNYpp2aH2IUGeQWh717vsELSfG8FijZFVLRAwLzUVh_KmARVqMMaout6qQlEgvqqFxjhKQwHOQWrfpqeiXVMk2naYYgFp4bpdUv_Iq_nJrPp0?key=QZjS5k0dJUR0swluZunyVA">
  </p>
 Como se puede observar tras dos iteraciones, es decir, que se encuentra actualmente en la tercera iteración, por tanto a la variable se le ha restado 1 dos veces. Por tanto, tiene que valer 8, como se muestra en la imagen superior.
 <p>SÉPTIMA ITERACIÓN:</p>
 <p align="middle">
-  <img align="middle" src="...">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeMxdr-QuLLQp6jMCgoqkOIUtG0Dz2yCUkE7Tx5bPD3ApMkbXbsMYu6LjrI9mI4rXSSE1WZ6TuhaN3DDaR61QsueYOE6WAut87SxFtHCE-b70QY3qMXC8F17IquGiqP8GVdX_2ZbW2nxMpcl859jCi7vYAu?key=QZjS5k0dJUR0swluZunyVA">
  </p>
 <p>En este caso, la variable a deberá de valer 4 como se puede ver en la imágen.</p>
 <p>DÉCIMA ITERACIÓN:</p>
 <p align="middle">
-  <img align="middle" src="...">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdKLz1W5mb2QPWirQsET_QZkACYHln296PYxbRYRqD_vssk8agCEPcuM1xVjDVzWhFnWKxME6AREiCxbcVP2OqFHVLAbVNuNglbSTMv1ZOeIDpnuEuOU4NAkaWmRueS8e49CYF-cHH6DK1po7Iki2YutA1h?key=QZjS5k0dJUR0swluZunyVA">
  </p>
 <p>Finalmente, en la décima iteración, la variable a deberá de valer 1 y por tanto el bucle dejará de ejecutarse pues la condición ha dejado de ser válida.</p>
 <p>De esta manera se demuestra el correcto funcionamiento del código en lenguaje ensamblador del tercer caso.</p>
-<p align="middle">
-  <img align="middle" src="...">
- </p>
 <h3 id="segunda-parte-extensión-de-la-isa">Segunda Parte: Extensión de la ISA</h3>
 <p>FALTA MIERDA POR PONER</p>
 <h2 id="conclusión">Conclusión</h2>
