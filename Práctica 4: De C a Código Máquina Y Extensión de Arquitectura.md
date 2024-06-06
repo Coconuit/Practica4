@@ -251,7 +251,9 @@ Sin embargo, el FULL-SUBTRACTOR que se ha diseñado solo puede hacer frente a re
 <td>BEQ</td>
 </tr>
 </tbody>
-</table><h2 id="resultados">Resultados</h2>
+</table><p>Una vez aclarado se actualiza el Autómata de Máquina Sencilla para añadir la nueva instrucción SUB.</p>
+<p>Además hay que tener en cuenta que los estados equivalen a su número binario, es decir:</p>
+<h2 id="resultados">Resultados</h2>
 <h3 id="implementación-en-la-máquina-del-código">Implementación en la máquina del código</h3>
 <p>Contenido de la implementación en la máquina del código…</p>
 <h3 id="extra-implementación-en-la-máquina-del-restador">Extra: Implementación en la máquina del restador</h3>
