@@ -87,12 +87,10 @@ Universidad San Jorge</p>
 Para traducir un código en C a ensamblador, primero hay que declarar/escoger en qué posición de memoria se van a guardar las variables. Después se escribe el código en el ensamblador.</p>
 <p>Quizá lo más importante a destacar en este apartado son las posiciones de memoria escogidas para guardar tanto las instrucciones como las variables. En los tres casos se ha decidido comenzar a guardar los datos desde las mismas posiciones. Evidentemente, las instrucciones se guardarán en la posición @0 ya que la máquina comenzará a leer por dicha posición.</p>
 <p>Sin embargo, se ha tomado la decisión de comenzar a guardar las variables desde la posición @32 de memoria ya que se encuentra a suficiente distancia de las instrucciones como para poder añadir más de ser necesario y es potencia de 2, por lo que los datos no se encontrarán entre dos posiciones de memoria.</p>
-<p><em>Apartado A:</em></p>
-<pre><code>C             |  Máquina
-:-------------------------:|:-------------------------:
-![](https://lh7-us.googleusercontent.com/docsz/AD_4nXfvC2KOA5LKU9gLvPH9KeWR9NFjsFHgaaPn111sOIMhFMSnorkpfEdjd2cNLdm_6KwKWiBxNFzTYbUQlS9HgmGtxtDNMu4Vdad9MsEbtRUGIcV-PtXKN2NMfELZyRnD5MVXOJuBLnVfGL-kpUBuGa3G3m76?key=QZjS5k0dJUR0swluZunyVA)  |  ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXc7q7cZhpkN2mipbKMmwLPm9z-drIxil894GB6dA1KgXS2A2_NOeLfjBa8JC3pHZI0P8G75US6smyG0xxrFK6IeHlNw-o0uXj61ZVqwoDoFMlnXCBYPkwGqF6ZCHlzpra-Hletb8jtBKu1xMATEHi2ecH79?key=QZjS5k0dJUR0swluZunyVA)
-</code></pre>
-<p>En este caso la traducción ha sido simple, únicamente se han sumado las variables y guardado el resultado en ambas variables.</p>
+<p><em>Apartado A:</em><br>
+<img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfvC2KOA5LKU9gLvPH9KeWR9NFjsFHgaaPn111sOIMhFMSnorkpfEdjd2cNLdm_6KwKWiBxNFzTYbUQlS9HgmGtxtDNMu4Vdad9MsEbtRUGIcV-PtXKN2NMfELZyRnD5MVXOJuBLnVfGL-kpUBuGa3G3m76?key=QZjS5k0dJUR0swluZunyVA" alt=""><br>
+<img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXc7q7cZhpkN2mipbKMmwLPm9z-drIxil894GB6dA1KgXS2A2_NOeLfjBa8JC3pHZI0P8G75US6smyG0xxrFK6IeHlNw-o0uXj61ZVqwoDoFMlnXCBYPkwGqF6ZCHlzpra-Hletb8jtBKu1xMATEHi2ecH79?key=QZjS5k0dJUR0swluZunyVA" alt=""><br>
+En este caso la traducción ha sido simple, únicamente se han sumado las variables y guardado el resultado en ambas variables.</p>
 <h4 id="traducción-a-lenguaje-máquina">Traducción a lenguaje máquina</h4>
 <p>Contenido de la traducción a lenguaje máquina…</p>
 <h3 id="segunda-parte-extensión-de-isa">Segunda Parte: Extensión de ISA</h3>
