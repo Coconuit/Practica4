@@ -97,7 +97,7 @@ Universidad San Jorge</p>
 <p>En este caso la traducción ha sido simple, únicamente se han sumado las variables y guardado el resultado en ambas variables.</p>
 <p><em>Apartado B</em></p>
 <p align="middle">
-  <img align="midlle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXc1JFPvg09ooN9mFIqUx2kqokI2xigj-EtKrwtzY3byltVrfLiE2E-l6gm0eErCwotPYF_yrkmWVX0YH6Op6mNfMOx4nEQIp4CIdEa1f8wvu3QLLSU2AFLK7MKdKHgFtrDZ1KSEnk9HZCCFclhVSYfdGgni?key=QZjS5k0dJUR0swluZunyVA">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXc1JFPvg09ooN9mFIqUx2kqokI2xigj-EtKrwtzY3byltVrfLiE2E-l6gm0eErCwotPYF_yrkmWVX0YH6Op6mNfMOx4nEQIp4CIdEa1f8wvu3QLLSU2AFLK7MKdKHgFtrDZ1KSEnk9HZCCFclhVSYfdGgni?key=QZjS5k0dJUR0swluZunyVA"> 
   <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXerZIRDncCo_1GTgxPHgDex8kuN1vQi9Wxd6pjv6wRxtBnIPxH6JXoVT5E_tQbhOC_BPJAx8Zf6rL0V8mE-gtlHTWbDfQ4BVO2XUwDmu1EdzsVTfZQJsoedGcYSdm_Lv3o0NKtccNEsBTyNF8-NGchkRkI?key=QZjS5k0dJUR0swluZunyVA"> 
 </p>
 <p>El segundo caso es un poco más complicado. Primero, se han creado dos variables auxiliares para poder guardar el resultado momentáneamente y poder hacer la comparación del condicional if.</p>
@@ -107,10 +107,19 @@ Universidad San Jorge</p>
 </blockquote>
 <p>Ocupa tanto pues se busca que tanto b y c tras finalizar la operación conserven sus valores iniciales, lo cual es imposible de realizar con una única instrucción en ensamblador y se necesita una variable auxiliar.</p>
 <p>En la segunda parte, para poder hacer frente a la condición if se ha tenido que realizar una estructura que en un principio puede parecer extraña pues el caso else se encuentra antes que la del if. De esta manera, en caso de que la condición se cumpliera el BEQ mandará la RAM a la instrucción dentro de la condición if y de no cumplirse, la máquina continuará su curso ejecutando la del else.</p>
-<p><em>Apartado C</em><br>
-<img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXez7kNrAeGgi88zz0tl-08zKnQ-5MI7_rVTauHYLRqcZEcNOGWuEBOBt0BqQjdUaHFIsYEejt29utIt1WiLc2LhiVzvweX0ks8x9I0Q8tIS8oGiN-1Hc9fwiQQuHwaL9-mKCa7uzl0tJmKY2Vfx4ijanf4?key=QZjS5k0dJUR0swluZunyVA" alt="">     <img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfBd52XBZp0Tk6usfYuMlU4kOwiVa82HUvu3QYANIfJmS_PGcEy_9JCl9306EDoO2fKWQjARBwIbkYmqAa8GBYMD-zBFq3r4mTBa8xSnLpBReu84FKlY-wzcoT3edV_ajACLGbOLkhzKAyIfnd-ReOsWveH?key=QZjS5k0dJUR0swluZunyVA" alt=""></p>
+<p><em>Apartado C</em></p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXez7kNrAeGgi88zz0tl-08zKnQ-5MI7_rVTauHYLRqcZEcNOGWuEBOBt0BqQjdUaHFIsYEejt29utIt1WiLc2LhiVzvweX0ks8x9I0Q8tIS8oGiN-1Hc9fwiQQuHwaL9-mKCa7uzl0tJmKY2Vfx4ijanf4?key=QZjS5k0dJUR0swluZunyVA">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXfBd52XBZp0Tk6usfYuMlU4kOwiVa82HUvu3QYANIfJmS_PGcEy_9JCl9306EDoO2fKWQjARBwIbkYmqAa8GBYMD-zBFq3r4mTBa8xSnLpBReu84FKlY-wzcoT3edV_ajACLGbOLkhzKAyIfnd-ReOsWveH?key=QZjS5k0dJUR0swluZunyVA"> 
+</p>
+En el tercer caso, hay que hacer frente a un bucle while y a una resta. Para ello, simplemente se hace uso de una combinación entre las instrucciones CMP y BEQ para simular el comportamiento de un bucle while. Mientras que para realizar la resta se usa la instrucción ADD entre el minuendo y el sustraendo en Complemento a 2.
+<p>Para realizar el complemento a 2 en vez de transformar el dato se ha preferido guardar directamente como variable para no tener que ejecutar tantas instrucciones.</p>
 <h4 id="traducción-a-lenguaje-máquina">Traducción a lenguaje máquina</h4>
-<p>Contenido de la traducción a lenguaje máquina…</p>
+<p>Una vez se ha traducido el código en C a lenguaje ensamblador se ha de volver a traducir, en este caso, a lenguaje máquina. Para ello, primero se traducirá a binario y después a hexadecimal.</p>
+<p>Para comenzar la traducción se necesita conocer la estructura de las instrucciones y su equivalente en binario:</p>
+<p align="middle">
+  <img align="middle" src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeCx-xfZFH8DJOhr8rj9C_0Gg0N6LRkcSPlFzAqin5cmtDWzWyrStHxvUB8tI62nzUo9qgg4gMrq073Pjm_gy6X6JtaBkC9HFudWgpN-nE4YXJ4acjuOQh1qTGd7HYohuF_yllqYCC7087xilvWM3BL2I-R?key=QZjS5k0dJUR0swluZunyVA">
+ </p>
 <h3 id="segunda-parte-extensión-de-isa">Segunda Parte: Extensión de ISA</h3>
 <p>Contenido de la segunda parte…</p>
 <h4 id="diseño-de-un-restador">Diseño de un Restador</h4>
